@@ -1,0 +1,6 @@
+# Run with `ansible-playbook -K GoPhish.yml`
+- hosts: 192.168.247.158 # can use an IP address instead of DNS hostname eg. 192.168.1.5
+
+  roles:
+  - { role: ansible-go, become: yes }
+  - { role: gophish, become: yes }
